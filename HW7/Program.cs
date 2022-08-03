@@ -7,7 +7,7 @@
    {
       for (int j = 0; j < width; j++)
       {
-         array[i, j] = Math.Round(new Random().NextDouble() * 1000) / 10;
+         array[i, j] = Math.Round(new Random().NextDouble() * 100, 1);
          if (new Random().Next(0, 2) == 1) array[i, j] *= -1;
       }
    }
@@ -33,7 +33,7 @@ void PrintColumnAverageInArray(double[,] array)
          average += array[j, i];
       }
       average /= array.GetLength(0);
-      Console.Write(Math.Round(average * 10) / 10 + " ");
+      Console.Write(Math.Round(average, 1) + " ");
    }
 }
 
